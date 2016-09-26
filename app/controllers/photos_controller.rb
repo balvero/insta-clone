@@ -1,5 +1,6 @@
 class PhotosController < ApplicationController
   before_action :find_photo, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:show, :index]
 
   def index
     @photos = Photo.all.order('created_at DESC')
@@ -17,7 +18,8 @@ class PhotosController < ApplicationController
     @photo = current_user.photos.build(photo_params)
 
     if @photo.save
-      redirect_to @photo, notice: "Photo has been posted!"
+      flash[:success] = "Photo has been posted!"
+      redirect_to @photo
     else
       render 'new'
     end
@@ -29,7 +31,8 @@ class PhotosController < ApplicationController
 
   def update
     if @photo.update(photo_params)
-      redirect_to @photo, notice: 'Photo successfully updated.'
+      flash[:success] = "Photo successfully updated."
+      redirect_to @photo
     else
       render 'edit'
     end

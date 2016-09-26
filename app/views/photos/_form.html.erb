@@ -1,13 +1,4 @@
 <%= simple_form_for @photo, html: { multiplart: true} do |f| %>
-    <% if @photo.errors.any? %>
-     <h3><%= pluralize(@photo.errors.count, "error") %> prevented this Photo from saving</h3>
-
-    <ul>
-      <% @photo.error.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-    </ul>
-    <% end %>
   <div class="form-group">
     <%= f.input :title, input_html: { class: 'form-control'} %>
   </div>
@@ -15,6 +6,6 @@
     <%= f.input :description, input_html: { class: 'form-control'} %>
   </div>
   <div class="form-group">
-    <%= f.submit 'Save', input_html: { class: 'btn btn-default'} %>
+    <%= f.submit 'Save', class: 'btn btn-success' %>
   </div>
 <% end %>
