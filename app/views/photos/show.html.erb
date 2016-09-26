@@ -1,6 +1,8 @@
 <h2><%= @photo.title%></h2>
 <p><%= @photo.description %></p>
 
+<p><%= @photo.user.email %></p>
+
 <%= link_to 'Back', root_path %>
 <%= link_to 'Edit', edit_photo_path %>
 <%= link_to 'Delete', photo_path, method: :delete, data: { confirm: 'Are you sure?'} %>
