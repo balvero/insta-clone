@@ -1,1 +1,3 @@
-<h2>InstaClone</h2>
+<% @photos.each do |photo| %>
+  <h2><%= link_to photo.title, photo_path(photo) %></h2>
+<% end %>

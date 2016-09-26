@@ -3,7 +3,7 @@
      <h3><%= pluralize(@photo.errors.count, "error") %> prevented this Photo from saving</h3>
 
     <ul>
-      <% @photo.error.full_message.each do |msg| %>
+      <% @photo.error.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
     </ul>
