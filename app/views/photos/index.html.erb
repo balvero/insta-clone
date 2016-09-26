@@ -1,3 +1,5 @@
 <% @photos.each do |photo| %>
   <h2><%= link_to photo.title, photo_path(photo) %></h2>
 <% end %>
+
+<%= link_to 'Gram It', new_photo_path %>

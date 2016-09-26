@@ -23,6 +23,23 @@ class PhotosController < ApplicationController
     end
   end
 
+  def edit
+
+  end
+
+  def update
+    if @photo.update(photo_params)
+      redirect_to @photo, notice: 'Photo successfully updated.'
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+    @photo.destroy
+    redirect_to root_path
+  end
+
 
   private
 
