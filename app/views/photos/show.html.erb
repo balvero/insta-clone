@@ -1,11 +1,19 @@
 <% content_for :title, @photo.title %>
-<h2><%= @photo.title%></h2>
-<p><%= @photo.description %></p>
 
-<p><%= @photo.user.email %></p>
+  <div class="col-md-8 col-md-offset-2">
+  <div class="gram">
+    <div class="content">
+      <h2 class="title"><%= @photo.title%></h2>
+      <div class="description"><%= @photo.description %></div>
+      <div class="author">by: <%= @photo.user.email %></div>
 
-<%= link_to 'Back', root_path, class: 'btn-sm btn-warning' %>
-<% if user_signed_in? %>
-<%= link_to 'Edit', edit_photo_path, class: 'btn-sm btn-info' %>
-<%= link_to 'Delete', photo_path, method: :delete, data: { confirm: 'Are you sure?'}, class: 'btn-sm btn-danger'  %>
-<% end %>
+      <%= link_to 'Back', root_path, class: 'btn-sm btn-warning' %>
+      <% if user_signed_in? %>
+          <%= link_to 'Edit', edit_photo_path, class: 'btn-sm btn-info' %>
+          <%= link_to 'Delete', photo_path, method: :delete, data: { confirm: 'Are you sure?'}, class: 'btn-sm btn-danger'  %>
+      <% end %>
+    </div>
+  </div>
+
+  </div>
+

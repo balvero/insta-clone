@@ -5,3 +5,18 @@
   To use Glyphicons sprites instead of Font Awesome, replace with "require twitter-bootstrap-static/sprites"
   =require twitter-bootstrap-static/fontawesome
   */
+
+@import 'https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i';
+
+body {
+    margin-top: 70px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f6f6f6;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Merriweather', serif;
+    font-weight: 300;
+}
+
