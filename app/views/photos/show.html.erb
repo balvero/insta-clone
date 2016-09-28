@@ -3,6 +3,7 @@
   <div class="col-md-8 col-md-offset-2">
   <div class="gram">
     <div class="content">
+      <%= image_tag @photo.image.url, class: 'img-responsive' %>
       <h2 class="title"><%= @photo.title%></h2>
       <div class="description"><%= @photo.description %></div>
       <div class="author">by: <%= @photo.user.email %></div>
