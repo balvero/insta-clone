@@ -1,19 +1,30 @@
 <% content_for :title, @photo.title %>
 
   <div class="col-md-8 col-md-offset-2">
-  <div class="gram">
-    <div class="content">
-      <%= image_tag @photo.image.url, class: 'img-responsive' %>
+  <div class="panel panel-default">
+    <%= image_tag @photo.image.url, class: 'img-responsive' %>
+    <div class="panel-body">
       <h2 class="title"><%= @photo.title%></h2>
       <div class="description"><%= @photo.description %></div>
-      <div class="author">by: <%= @photo.user.email %></div>
-
-      <%= link_to 'Back', root_path, class: 'btn-sm btn-warning' %>
-      <% if user_signed_in? && current_user == @photo.user %>
-          <%= link_to 'Edit', edit_photo_path, class: 'btn-sm btn-info' %>
-          <%= link_to 'Delete', photo_path, method: :delete, data: { confirm: 'Are you sure?'}, class: 'btn-sm btn-danger'  %>
-      <% end %>
     </div>
+    <div class="panel-footer">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="author">by: <%= @photo.user.email %></div>
+        </div>
+        <div class="col-md-6">
+          <div class="btn-group pull-right">
+            <% if user_signed_in? && current_user == @photo.user %>
+                <%= link_to 'Edit', edit_photo_path, class: 'btn btn-info' %>
+                <%= link_to 'Delete', photo_path, method: :delete, data: { confirm: 'Are you sure?'}, class: 'btn btn-danger'  %>
+            <% end %>
+          </div>
+      </div>
+    </div>
+
+    </div>
+
+
   </div>
 
   </div>
