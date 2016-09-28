@@ -11,10 +11,13 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require masonry/jquery.masonry
+//= require masonry/jquery.infinitescroll.min
 //= require turbolinks
+//= require turbolinks-compatibility
 //= require_tree .
 
 
