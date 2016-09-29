@@ -38,10 +38,6 @@ footer {
   color: #fff !important;
 }
 
-.box {
-  width: 350px;
-  margin: 10px;
-}
 
 #photos .panel-body {
   padding: 0px;
@@ -51,5 +47,55 @@ footer {
     margin: 15px;
   }
 }
+
+.btn {
+  box-shadow: 0px -2px 0px rgba(0,0,0,0.2) inset !important;
+}
+
+input[type=text], .form-control {
+  font-size: 18px;
+  box-shadow: none;
+  border-bottom: 2px solid #CCC!important;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+input.file.form-control {
+  background-color: transparent;
+  font-size: 14px;
+  border:none !important;
+}
+
+.box {
+  max-width: 350px;
+  width: 100%;
+  margin: 10px;
+
+  .panel-body {
+    background-color: #f6f6f6;
+  }
+}
+
+.box:hover img {
+  opacity: 0.6;
+  transition: all 0.2s;
+}
+
+.panel-default {
+  border-color: #e6e6e6;
+  box-shadow: none;
+}
+
+
+
+
+//@media screen and (max-width: 991px) {
+//  .box {
+//    width: 50% !important;
+//  }
+//}
+
+
 
 
